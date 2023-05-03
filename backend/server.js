@@ -149,9 +149,9 @@ app.use("/api/camps", require("./routes/campRoutes"));
 app.use("/api/tour", require("./routes/tourRoutes"));
 app.use("/api/periods", require("./routes/periodRoutes"));
 
-app.use(express.static("/tmp"));
+app.use(express.static("/home"));
 
-app.use("/images", express.static("/tmp"));
+app.use("/images", express.static("/home"));
 
 // Serve frontend
 // if (process.env.NODE_ENV === "production") {
