@@ -151,7 +151,7 @@ app.use("/api/periods", require("./routes/periodRoutes"));
 
 app.use(express.static("/tmp"));
 
-app.use("/images", express.static("./uploads"));
+app.use("/images", express.static("/mounts/upload"));
 
 // Serve frontend
 // if (process.env.NODE_ENV === "production") {
