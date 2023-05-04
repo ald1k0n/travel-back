@@ -19,7 +19,7 @@ router.patch("/:roomId/prices", insertPrices);
 
 router.patch("/:roomId/upload", upload.array("images", 5), (req, res) => {
   const filePath = req.files.map(
-    (file) => `https://testapialdik.azurewebsites.net/images/${file.filename}`
+    (file) => `https://backend-ap23.azurewebsites.net/images/${file.filename}`
   );
 
   Room.updateOne(

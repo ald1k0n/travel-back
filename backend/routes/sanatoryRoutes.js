@@ -19,7 +19,7 @@ router.get("/:id", getSingleSanatorium);
 
 router.patch("/:id/upload", upload.array("images", 5), (req, res) => {
   const filePath = req.files.map(
-    (file) => `https://testapialdik.azurewebsites.net/images/${file.filename}`
+    (file) => `https://backend-ap23.azurewebsites.net/images/${file.filename}`
   );
 
   Sanatorium.updateOne({ _id: req.params.id }, { $set: { img: filePath } })

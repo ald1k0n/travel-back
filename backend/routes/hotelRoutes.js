@@ -39,7 +39,7 @@ router.post("/hotelRecommendation/tags", getByTagRecommendation);
 router.patch("/:hotelId/upload", upload.array("images", 5), (req, res) => {
   console.log(req.files);
   const filePath = req.files.map(
-    (file) => `https://testapialdik.azurewebsites.net/images/${file.filename}`
+    (file) => `https://backend-ap23.azurewebsites.net/images/${file.filename}`
   );
   Hotel.updateOne(
     { _id: req.params.hotelId },
